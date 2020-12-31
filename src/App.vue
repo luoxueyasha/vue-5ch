@@ -2,22 +2,24 @@
   <div id="app">
     <THREADCONTENTS />
   </div>
+
 </template>
 
 <script>
-import THREADCONTENTS from './components/HelloWorld.vue'
+import THREADCONTENTS from "./components/HelloWorld.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    THREADCONTENTS
-  }
-}
+    THREADCONTENTS,
+  },
+};
+
 </script>
 
 <style>
 #app {
-  font-family:Saitamaar,"MS Gothic",Simsun;
+  font-family: Saitamaar, "MS Gothic", Simsun;
   margin: 0;
   padding: 0;
   color: #000000;
@@ -25,6 +27,5 @@ export default {
   background-repeat: repeat;
   background-attachment: fixed;
   font-weight: 600;
-
 }
 </style>
