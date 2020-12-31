@@ -8,7 +8,7 @@
     <br />
     <!--帖子 start-->
     <dl class="thread" id="thread" style="margin-top: 0px">
-      <span v-for="(item,index) in list" v-bind:key="index">
+      <span v-for="(item, index) in list" v-bind:key="index">
         <!--层 start-->
         <dt>
           <!--发言人 start-->
@@ -38,6 +38,8 @@
       ></textarea>
       <button @click="delcomponent">删除</button>
     </dl>
+    <button @click="savethread">导出帖子</button>
+    <button @click="loadthread">导入帖子</button>
     <!--帖子 end-->
   </div>
 </template>
@@ -46,7 +48,7 @@ export default {
   name: "THREADCONTENTS",
   data() {
     return {
-      list: []
+      list: [],
     };
   },
   methods: {
@@ -70,6 +72,31 @@ export default {
     delcomponent: function() {
       this.list.splice(this.deliden - 1, 1);
       this.deliden = "";
+    },
+    savethread: function() {
+      localStorage.setItem("key", JSON.stringify(this.list));
+    },
+    loadthread: function() {
+      var data1 = JSON.parse(localStorage.getItem("key"));
+      var temp = 0;
+      this.list = [];
+      /*
+      map[count] =list.length
+      map[i]=list[i]
+
+      for(const i of data1){
+        this.list[i]=data1[i];
+      }
+      */
+      while (data1[temp].content != "") {
+        this.list.push({
+          name: data1[temp].name,
+          time: data1[temp].time,
+          ID: data1[temp].ID,
+          content: data1[temp].content,
+        });
+        temp++;
+      }
     },
   },
 };
