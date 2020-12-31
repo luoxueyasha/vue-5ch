@@ -38,6 +38,11 @@
       ></textarea>
       <button @click="delcomponent">删除</button>
     </dl>
+    <textarea
+      class="iden"
+      v-model="threadname"
+      placeholder="读取/储存内容"
+    ></textarea>
     <button @click="savethread">导出帖子</button>
     <button @click="loadthread">导入帖子</button>
     <!--帖子 end-->
@@ -49,6 +54,11 @@ export default {
   data() {
     return {
       list: [],
+      name: "",
+      iden: "",
+      txt: "",
+      deliden: "",
+      threadname: "",
     };
   },
   methods: {
@@ -74,29 +84,24 @@ export default {
       this.deliden = "";
     },
     savethread: function() {
-      localStorage.setItem("key", JSON.stringify(this.list));
+      if (!this.threadname) {
+        this.threadname = "thread-default";
+      }
+      localStorage.setItem(this.threadname, JSON.stringify(this.list));
     },
     loadthread: function() {
-      var data1 = JSON.parse(localStorage.getItem("key"));
-      var temp = 0;
+      if (!this.threadname) {
+        this.threadname = "thread-default";
+      }
+      var data1 = JSON.parse(localStorage.getItem(this.threadname));
       this.list = [];
+      for (const i of data1) {
+        this.list.push(i);
+      }
       /*
       map[count] =list.length
       map[i]=list[i]
-
-      for(const i of data1){
-        this.list[i]=data1[i];
-      }
       */
-      while (data1[temp].content != "") {
-        this.list.push({
-          name: data1[temp].name,
-          time: data1[temp].time,
-          ID: data1[temp].ID,
-          content: data1[temp].content,
-        });
-        temp++;
-      }
     },
   },
 };
