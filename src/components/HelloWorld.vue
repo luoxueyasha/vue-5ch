@@ -3,6 +3,7 @@
     <h3 class="thread_title">
       <!--标题 start-->
       <span>{{title}}</span>
+      <!--标题的保存回头再写-->
       <!--标题 end-->
     </h3>
     <br />
@@ -22,7 +23,7 @@
           <!--发言人 end-->
         </dt>
         <!--内容 start-->
-        <dd v-html="item.content"></dd>
+        <dd>{{item.content}}</dd>
         <!--内容 end-->
         <!--层 end-->
       </span>
@@ -54,7 +55,7 @@ export default {
   data() {
     return {
       list: [],
-      title:"标题",
+      title:"【安价Replay】烈幻想入群友们的暗锅实况 001",
 //
       name: "",
       iden: "",

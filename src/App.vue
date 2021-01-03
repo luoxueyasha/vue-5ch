@@ -1,6 +1,9 @@
 <template>
+
   <div id="app">
+    <p style="height:50px"></p>
     <THREADCONTENTS />
+    <p style="height:50px"></p>
   </div>
 
 </template>
