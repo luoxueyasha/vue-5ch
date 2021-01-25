@@ -2,7 +2,7 @@
   <div class="THREADCONTENTS" id="THREADCONTENTS">
     <h3 class="thread_title">
       <!--标题 start-->
-      <span>{{title}}</span>
+      <span>{{threadname}}</span>
       <!--标题的保存回头再写-->
       <!--标题 end-->
     </h3>
@@ -27,7 +27,10 @@
         <!--内容 end-->
         <!--层 end-->
       </span>
+      <textarea class="thtitle" v-model="thtitle" placeholder="标题"></textarea>
+      <button @click="changetitle">更改标题</button>
       <textarea class="iden" v-model="name" placeholder="名称"></textarea>
+      <textarea class="iden" v-model="ttime" placeholder="时间"></textarea>
       <textarea class="iden" v-model="iden" placeholder="ID"></textarea>
       <textarea class="txt" v-model="txt" placeholder="输入文本"></textarea>
       <button @click="addcomponent">发送</button>
@@ -55,13 +58,11 @@ export default {
   data() {
     return {
       list: [],
-      title:"【安价Replay】烈幻想入群友们的暗锅实况 001",
-//
       name: "",
       iden: "",
       txt: "",
       deliden: "",
-      threadname: "",
+      threadname: "thread-default",
     };
   },
   methods: {
@@ -73,9 +74,12 @@ export default {
         if (!this.name) {
           this.name = "（　´∀）・∀）,,ﾟД)";
         }
+        if(!this.ttime){
+          this.ttime="2020/12/26(土) 12:34:56";
+        }
         this.list.push({
           name: this.name,
-          time: "2020/12/26 12:34:56(土)",
+          time: this.ttime,
           ID: this.iden,
           content: this.txt,
         });
@@ -105,6 +109,9 @@ export default {
       map[count] =list.length
       map[i]=list[i]
       */
+    },
+    changetitle:function(){
+      this.threadname = this.thtitle;
     },
   },
 };
