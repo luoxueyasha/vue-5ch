@@ -52,6 +52,7 @@ h3 span {
 
 h3.thread_title {
   font-family: Saitamaar, "MS Gothic";
+  font-weight: 700;
   margin: 0;
   padding: 0 2em 0 3em;
   text-indent: -4em;
@@ -80,12 +81,14 @@ dt {
   margin: 0px 0.5em;
   padding: 0px;
   font-size: 1em;
+  margin-bottom: 15px;
 }
 
 dd {
   margin-bottom: 2em;
-  font-size: 1em;
-  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.125;
+  font-weight: 500;
   white-space: pre-line;
 }
 
@@ -111,23 +114,29 @@ span.keyword1 {
 
 textarea.iden {
   font-family: Saitamaar, "MS Gothic", Simsun;
+  font-weight: 500;
+  font-size: 16px;
   white-space: pre-line;
   width: 25%;
   height: 8%;
-  margin-right: 15px;
+  margin-right: 20px;
 }
 
 textarea.txt {
   font-family: Saitamaar, "MS Gothic", Simsun;
+  font-weight: 500;
+  font-size:16px;
+  line-height: 1.125;
   width: 80%;
   height: 60%;
   min-height: 200px;
-  margin-right: 5px;
   white-space: pre-line;
 }
 
 textarea.thtitle{
   font-family: Saitamaar, "MS Gothic", Simsun;
+  font-weight: 600;
+  font-size: 18px;
   width: 80%;
   height: 20%;
   min-height: 30px;
