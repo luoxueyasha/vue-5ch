@@ -10,7 +10,7 @@
 1. 从GitHub……或者其他地方把**Releases里的最新版本的**文件包（文件名：vue-5ch.zip）整个下载下来。  
 **不要点那个绿色的下载按钮，除非你知道这堆源码还缺什么运行环境。**
 2. 安装[Node.js](http://nodejs.cn/)，一路next就行。
-3. 运行里面的vue-5ch.bat文件，会自动弹出一个cmd窗口
+3. 运行里面的vue-5ch.bat文件，会自动弹出一个cmd窗口  
 ~~3. 运行cmd.exe Mac和Linux的我不知道是什么情况 ，cd到README.md文件所在的文件夹  
 关于cd命令的使用可以参考[这篇文章](https://blog.csdn.net/chengdongyuan/article/details/73256862)，  
 盘符不一样记得切盘符
