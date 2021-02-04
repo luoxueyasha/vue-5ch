@@ -22,7 +22,7 @@ export default {
 
 <style>
 #app {
-  font-family: Saitamaar, "MS Gothic", Simsun;
+  font-family: 'ＭＳ Ｐゴシック', 'MS PGothic', 'IPAMonaPGothic', '方正兰亭黑',sans-serif;
   margin: 0;
   padding: 0;
   color: #000000;

@@ -2,7 +2,7 @@
   <div class="THREADCONTENTS" id="THREADCONTENTS">
     <h3 class="thread_title">
       <!--标题 start-->
-      <span>{{threadname}}</span>
+      <span>{{thtitle}}</span>
       <!--标题的保存回头再写-->
       <!--标题 end-->
     </h3>
@@ -87,8 +87,10 @@ export default {
       }
     },
     delcomponent: function() {
-      this.list.splice(this.deliden - 1, 1);
-      this.deliden = "";
+      if(this.deliden){
+        this.list.splice(this.deliden - 1, 1);
+        this.deliden = "";
+      }
     },
     savethread: function() {
       if (!this.threadname) {
@@ -111,7 +113,9 @@ export default {
       */
     },
     changetitle:function(){
-      this.threadname = this.thtitle;
+      if(this.thtitle){
+        this.threadname = this.thtitle;
+      }
     },
   },
 };
