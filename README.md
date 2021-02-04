@@ -11,17 +11,13 @@
 **不要点那个绿色的下载按钮，除非你知道这堆源码还缺什么运行环境。**
 2. 安装[Node.js](http://nodejs.cn/)，一路next就行。
 3. 运行里面的vue-5ch.bat文件，会自动弹出一个cmd窗口  
-~~3. 运行cmd.exe Mac和Linux的我不知道是什么情况 ，cd到README.md文件所在的文件夹  
-关于cd命令的使用可以参考[这篇文章](https://blog.csdn.net/chengdongyuan/article/details/73256862)，  
-盘符不一样记得切盘符
-4. 输入```npm run serve``` 并回车~~
-5. 如果一会cmd显示了  
+4. 如果一会cmd显示了  
 ``` DONE Compiled succesfully in XXms```  
 就可以在浏览器里访问窗口里显示的**Local：http://localhost:XXXX/** 进行使用。~~如果显示的是别的的话我也不知道怎么办啊~~
-6. 安装 **ＭＳ Ｐゴシック**， **MS PGothic**， **IPAMonaPGothic**， **方正兰亭黑**， **sans-serif** 一共五个字体。
-7. Enjoy！
+5. 安装 **ＭＳ Ｐゴシック**， **MS PGothic**， **IPAMonaPGothic**， **方正兰亭黑**， **sans-serif** 一共五个字体。
+6. Enjoy！
 
-8. 关闭的话关闭那个cmd窗口就好。
+7. 关闭的话关闭那个cmd窗口就好。
 ## 推荐使用环境
 
 Win10，Chrome浏览器。  
