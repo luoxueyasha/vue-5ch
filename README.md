@@ -7,7 +7,7 @@
 
 ## 我该怎么安装？
 
-1. 从GitHub……或者其他地方把这个文件包整个下载下来。
+1. 从GitHub……或者其他地方把**Realease里的最新版本的**文件包整个下载下来。
 2. 安装[Node.js](http://nodejs.cn/)，一路next就行。
 3. 运行cmd.exe ~~Mac和Linux的我不知道是什么情况~~ ，cd到README.md文件所在的文件夹
 4. 输入```npm run serve``` 并回车
