@@ -7,7 +7,7 @@
 
 ## 我该怎么安装？
 
-1. 从GitHub……或者其他地方把**Releases里的最新版本的**文件包整个下载下来。  
+1. 从GitHub……或者其他地方把**Releases里的最新版本的**文件包（文件名：vue-5ch.zip）整个下载下来。  
 **不要点那个绿色的下载按钮，除非你知道这堆源码还缺什么运行环境。**
 2. 安装[Node.js](http://nodejs.cn/)，一路next就行。
 3. 运行cmd.exe ~~Mac和Linux的我不知道是什么情况~~ ，cd到README.md文件所在的文件夹
