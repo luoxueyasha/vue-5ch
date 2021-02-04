@@ -51,7 +51,7 @@ h3 span {
 }
 
 h3.thread_title {
-  font-family: Saitamaar, "MS Gothic";
+  font-family: 'ＭＳ Ｐゴシック', 'MS PGothic', 'IPAMonaPGothic', '方正兰亭黑',sans-serif;
   font-weight: 700;
   margin: 0;
   padding: 0 2em 0 3em;
@@ -85,10 +85,11 @@ dt {
 }
 
 dd {
+  font-family: 'ＭＳ Ｐゴシック', 'MS PGothic', 'IPAMonaPGothic', '方正兰亭黑',sans-serif;
   margin-bottom: 2em;
   font-size: 16px;
   line-height: 1.125;
-  font-weight: 500;
+  font-weight: normal;
   white-space: pre-line;
 }
 
@@ -111,35 +112,30 @@ span.keyword1 {
   line-height: 2.5em;
   word-break: keep-all;
 }
-
-textarea.iden {
-  font-family: Saitamaar, "MS Gothic", Simsun;
-  font-weight: 500;
+textarea{
+  font-family: 'ＭＳ Ｐゴシック', 'MS PGothic', 'IPAMonaPGothic', '方正兰亭黑',sans-serif;
   font-size: 16px;
   white-space: pre-line;
+}
+
+textarea.iden {
   width: 25%;
   height: 8%;
   margin-right: 20px;
 }
 
 textarea.txt {
-  font-family: Saitamaar, "MS Gothic", Simsun;
-  font-weight: 500;
-  font-size:16px;
   line-height: 1.125;
   width: 80%;
   height: 60%;
   min-height: 200px;
-  white-space: pre-line;
 }
 
 textarea.thtitle{
-  font-family: Saitamaar, "MS Gothic", Simsun;
   font-weight: 600;
   font-size: 18px;
   width: 80%;
   height: 20%;
   min-height: 30px;
   margin-right:5px;
-  white-space: pre-line;
 }
