@@ -43,11 +43,11 @@ h3 span.common {
   color: #fff;
   font-size: 1em;
 }
-
+/*标题样式*/
 h3 span {
   padding: 0 0 0.5em 1em;
   color: #ff0000;
-  font-size: 1.5em;
+  font-size: 1.625em;
 }
 
 h3.thread_title {
@@ -119,9 +119,10 @@ textarea{
 }
 
 textarea.iden {
-  width: 25%;
-  height: 8%;
-  margin-right: 20px;
+  width:25%;
+  min-width: 100px;
+  min-height:30px;
+  margin-right: 1.875%;
 }
 
 textarea.txt {
@@ -129,6 +130,7 @@ textarea.txt {
   width: 80%;
   height: 60%;
   min-height: 200px;
+  margin-right: 1.875%;
 }
 
 textarea.thtitle{
@@ -138,4 +140,21 @@ textarea.thtitle{
   height: 20%;
   min-height: 30px;
   margin-right:5px;
+  margin-right: 1.875%;
+}
+
+button{
+  min-height:40px;
+  min-width:60px;
+  margin-left: -1%;
+  margin-right:1.875%;
+  top:-13px;
+  position: relative;
+}
+
+button.send{
+  min-height:50px;
+  min-width:80px;
+  top: -20px;
+  position: relative;
 }

@@ -2,8 +2,7 @@
   <div class="THREADCONTENTS" id="THREADCONTENTS">
     <h3 class="thread_title">
       <!--标题 start-->
-      <span>{{thtitle}}</span>
-      <!--标题的保存回头再写-->
+      <span>{{threadname}}</span>
       <!--标题 end-->
     </h3>
     <br />
@@ -27,32 +26,39 @@
         <!--内容 end-->
         <!--层 end-->
       </span>
+            </dl>
+      <!--信息输入 start-->
       <textarea class="thtitle" v-model="thtitle" placeholder="标题"></textarea>
       <button @click="changetitle">更改标题</button>
+      <br />
       <textarea class="iden" v-model="name" placeholder="名称"></textarea>
       <textarea class="iden" v-model="ttime" placeholder="时间"></textarea>
       <textarea class="iden" v-model="iden" placeholder="ID"></textarea>
+      <br />
       <textarea class="txt" v-model="txt" placeholder="输入文本"></textarea>
-      <button @click="addcomponent">发送</button>
+      <button class="send" @click="addcomponent">发送</button>
       <br />
       <textarea
         class="iden"
         v-model="deliden"
-        placeholder="要删除的楼层数"
+        placeholder="删除楼层数"
       ></textarea>
       <button @click="delcomponent">删除</button>
-    </dl>
+
+    <br />
     <textarea
       class="iden"
-      v-model="threadname"
+      v-model="thtitle"
       placeholder="读取/储存名"
     ></textarea>
     <button @click="savethread">导出帖子</button>
     <button @click="loadthread">导入帖子</button>
-    <!--帖子 end-->
+    <!--信息输入 end-->
+  <!--帖子 end-->
   </div>
 </template>
 <script>
+//vue
 export default {
   name: "THREADCONTENTS",
   data() {
@@ -87,36 +93,35 @@ export default {
       }
     },
     delcomponent: function() {
+      //这个要改成删除指定楼层数，而非数组下标的
+      //楼层数单独拿出来做一个可自定义内容（且不唯一）
       if(this.deliden){
         this.list.splice(this.deliden - 1, 1);
         this.deliden = "";
       }
     },
+    changetitle:function(){
+      this.threadname = this.thtitle;
+    },
     savethread: function() {
-      if (!this.threadname) {
-        this.threadname = "thread-default";
+      if (!this.thtitle) {
+        this.thtitle = "thread-default";
       }
-      localStorage.setItem(this.threadname, JSON.stringify(this.list));
+      localStorage.setItem(this.thtitle, JSON.stringify(this.list));
     },
     loadthread: function() {
-      if (!this.threadname) {
-        this.threadname = "thread-default";
+      if (!this.thtitle) {
+        this.thtitle = "thread-default";
       }
-      var data1 = JSON.parse(localStorage.getItem(this.threadname));
+      this.changetitle();
+      var data1 = JSON.parse(localStorage.getItem(this.thtitle));
       this.list = [];
       for (const i of data1) {
         this.list.push(i);
       }
-      /*
-      map[count] =list.length
-      map[i]=list[i]
-      */
+
     },
-    changetitle:function(){
-      if(this.thtitle){
-        this.threadname = this.thtitle;
-      }
-    },
+
   },
 };
 </script>

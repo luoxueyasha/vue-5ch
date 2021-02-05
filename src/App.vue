@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import THREADCONTENTS from "./components/HelloWorld.vue";
+import THREADCONTENTS from "./components/Main.vue";
 
 export default {
   name: "App",
