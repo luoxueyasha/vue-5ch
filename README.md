@@ -80,8 +80,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-### 许可
+## License
 
-![WTFPL](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png)
-
-© 2020 WTFPL – Do What the Fuck You Want to Public License.
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
