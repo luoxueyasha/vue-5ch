@@ -1,5 +1,5 @@
 # vue-5ch
-![GitHub](https://img.shields.io/github/license/iconteral/UJShealthChecker)
+[![License](https://img.shields.io/npm/l/tiptap.svg)](https://www.npmjs.com/package/tiptap)
 ## 这是个啥？
   
 这是一个依赖[Vue Cli](https://cli.vuejs.org/zh/)的本地的仿[5ch讨论板](https://www2.5ch.net/5ch.html)式留言板，用于对发出的文本进行一定程度的排版，便于有需要的人使用。  
