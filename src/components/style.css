@@ -158,3 +158,12 @@ button.send{
   top: -20px;
   position: relative;
 }
+
+EDITOR{
+  background-color: white;
+  line-height: 1.125;
+  width: 80%;
+  height: 60%;
+  min-height: 200px;
+  margin-right: 1.875%;
+}

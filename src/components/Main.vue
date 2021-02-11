@@ -2,7 +2,7 @@
   <div class="THREADCONTENTS" id="THREADCONTENTS">
     <h3 class="thread_title">
       <!--标题 start-->
-      <span>{{threadname}}</span>
+      <span>{{ threadname }}</span>
       <!--标题 end-->
     </h3>
     <br />
@@ -22,45 +22,32 @@
           <!--发言人 end-->
         </dt>
         <!--内容 start-->
-        <dd>{{item.content}}</dd>
+        <dd>{{ item.content }}</dd>
         <!--内容 end-->
         <!--层 end-->
       </span>
-            </dl>
-      <!--信息输入 start-->
-      <textarea class="thtitle" v-model="thtitle" placeholder="标题"></textarea>
-      <button @click="changetitle">更改标题</button>
-      <br />
-      <textarea class="iden" v-model="name" placeholder="名称"></textarea>
-      <textarea class="iden" v-model="ttime" placeholder="时间"></textarea>
-      <textarea class="iden" v-model="iden" placeholder="ID"></textarea>
-      <br />
-      <textarea class="txt" v-model="txt" placeholder="输入文本"></textarea>
-      <button class="send" @click="addcomponent">发送</button>
-      <br />
-      <textarea
-        class="iden"
-        v-model="deliden"
-        placeholder="删除楼层数"
-      ></textarea>
-      <button @click="delcomponent">删除</button>
+    </dl>
 
-    <br />
-    <textarea
-      class="iden"
-      v-model="thtitle"
-      placeholder="读取/储存名"
-    ></textarea>
+    <div>
+      <EDITOR @a_even="a_even"></EDITOR>
+      <button @click="myfunc">获取EDITOR的content</button>
+    </div>
+
+    <textarea class="iden" v-model="thtitle" placeholder="读取/储存名">
+    </textarea>
     <button @click="savethread">导出帖子</button>
     <button @click="loadthread">导入帖子</button>
-    <!--信息输入 end-->
-  <!--帖子 end-->
+    <!--帖子 end-->
   </div>
 </template>
 <script>
 //vue
+import EDITOR from "./Editor.vue";
 export default {
   name: "THREADCONTENTS",
+  components: {
+    EDITOR,
+  },
   data() {
     return {
       list: [],
@@ -72,6 +59,13 @@ export default {
     };
   },
   methods: {
+    myfunc:function(){
+      
+    },
+    a_even(e){
+      console.log('ev',e);
+    }
+    /*
     addcomponent: function() {
       if (this.txt) {
         if (!this.iden) {
@@ -80,8 +74,8 @@ export default {
         if (!this.name) {
           this.name = "（　´∀）・∀）,,ﾟД)";
         }
-        if(!this.ttime){
-          this.ttime="2020/12/26(土) 12:34:56";
+        if (!this.ttime) {
+          this.ttime = "2020/12/26(土) 12:34:56";
         }
         this.list.push({
           name: this.name,
@@ -95,12 +89,12 @@ export default {
     delcomponent: function() {
       //这个要改成删除指定楼层数，而非数组下标的
       //楼层数单独拿出来做一个可自定义内容（且不唯一）
-      if(this.deliden){
+      if (this.deliden) {
         this.list.splice(this.deliden - 1, 1);
         this.deliden = "";
       }
     },
-    changetitle:function(){
+    changetitle: function() {
       this.threadname = this.thtitle;
     },
     savethread: function() {
@@ -119,9 +113,8 @@ export default {
       for (const i of data1) {
         this.list.push(i);
       }
-
     },
-
+    */
   },
 };
 </script>
