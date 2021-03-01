@@ -167,3 +167,12 @@ EDITOR{
   min-height: 200px;
   margin-right: 1.875%;
 }
+
+div.main-editor{
+  background-color: white;
+  line-height: 1.125;
+  width: 80%;
+  height: 60%;
+  min-height: 200px;
+  margin-right: 1.875%;
+}

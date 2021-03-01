@@ -28,8 +28,8 @@
       </span>
     </dl>
 
-    <div>
-      <EDITOR>{{ EditorContent }}</EDITOR>
+    <div class="main-editor">
+      <EDITOR></EDITOR><!--how can I get editor-content and push it?-->
     </div>
 
     <textarea class="iden" v-model="thtitle" placeholder="读取/储存名">
