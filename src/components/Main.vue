@@ -29,8 +29,7 @@
     </dl>
 
     <div>
-      <EDITOR @a_even="a_even"></EDITOR>
-      <button @click="myfunc">获取EDITOR的content</button>
+      <EDITOR>{{ EditorContent }}</EDITOR>
     </div>
 
     <textarea class="iden" v-model="thtitle" placeholder="读取/储存名">
@@ -59,12 +58,7 @@ export default {
     };
   },
   methods: {
-    myfunc:function(){
-      
-    },
-    a_even(e){
-      console.log('ev',e);
-    }
+    myfunc: function() {},
     /*
     addcomponent: function() {
       if (this.txt) {

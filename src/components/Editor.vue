@@ -23,11 +23,6 @@ export default {
     // Always destroy your editor instance when it's no longer needed
     this.editor.destroy();
   },
-  watch(){
-    editor(){//bug here
-      let temp = this;
-      temp.$emit('a_even',temp.content);
-    }
-  }
+
 }
 </script>
