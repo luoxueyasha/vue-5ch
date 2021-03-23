@@ -10,6 +10,13 @@ div.THREADCONTENTS {
   font-size: 1em;
 }
 
+/*Set '\' as normal*/
+@font-face{
+  font-family: crrRslash;
+  src:local('microsoft yahei');
+  unicode-range:U+005C;
+}
+
 a {
   border-width: 0px;
 }
@@ -51,7 +58,7 @@ h3 span {
 }
 
 h3.thread_title {
-  font-family: 'ＭＳ Ｐゴシック', 'MS PGothic', 'IPAMonaPGothic', '方正兰亭黑',sans-serif;
+  font-family: crrRslash,'ＭＳ Ｐゴシック', 'MS PGothic', 'IPAMonaPGothic', '方正兰亭黑',sans-serif;
   font-weight: 700;
   margin: 0;
   padding: 0 2em 0 3em;
@@ -84,14 +91,18 @@ dt {
   margin-bottom: 15px;
 }
 
+
+
+
 dd {
-  font-family: 'ＭＳ Ｐゴシック', 'MS PGothic', 'IPAMonaPGothic', '方正兰亭黑',sans-serif;
+  font-family: crrRslash,'ＭＳ Ｐゴシック', 'MS PGothic', 'IPAMonaPGothic', '方正兰亭黑',sans-serif;
   margin-bottom: 2em;
   font-size: 16px;
   line-height: 1.125;
   font-weight: normal;
   white-space: pre-line;
 }
+
 
 span.keyword0 {
   padding: 0.5em;
@@ -113,7 +124,7 @@ span.keyword1 {
   word-break: keep-all;
 }
 textarea{
-  font-family: 'ＭＳ Ｐゴシック', 'MS PGothic', 'IPAMonaPGothic', '方正兰亭黑',sans-serif;
+  font-family: crrRslash,'ＭＳ Ｐゴシック', 'MS PGothic', 'IPAMonaPGothic', '方正兰亭黑',sans-serif;
   font-size: 16px;
   white-space: pre-line;
 }
