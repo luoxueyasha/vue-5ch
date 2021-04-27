@@ -31,7 +31,7 @@
     <div class="main-editor">
       <EDITOR></EDITOR><!--how can I get editor-content and push it?-->
     </div>
-
+    <button @click="send">发送</button>
     <textarea class="iden" v-model="thtitle" placeholder="读取/储存名">
     </textarea>
     <button @click="savethread">导出帖子</button>
@@ -58,7 +58,9 @@ export default {
     };
   },
   methods: {
-    myfunc: function() {},
+    send:function(){
+      console.log(EDITOR.data().GetElementById("innerText"));
+    },
     /*
     addcomponent: function() {
       if (this.txt) {
@@ -88,6 +90,7 @@ export default {
         this.deliden = "";
       }
     },
+    */
     changetitle: function() {
       this.threadname = this.thtitle;
     },
@@ -108,7 +111,7 @@ export default {
         this.list.push(i);
       }
     },
-    */
+    
   },
 };
 </script>
